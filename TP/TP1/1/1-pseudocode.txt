@@ -1,0 +1,23 @@
+algo postfixé (expression: tableau de string)
+  Pile p;
+  n <- longueur de l'expression;
+  
+  Pour o de 1 à n faire:
+    Si expression[i] est numérique alors: 
+      p.empiler(conversion(expression[i]);
+    Sinon:
+      op1 <- p.sommet();
+      P.depiler();
+      op2 <- p.sommet();
+      P.depiler();
+      operation <- expression[i];
+      res <- op1 operation op2;
+      p.empiler(res);
+    FinSi;
+  Fin;
+
+  resu <- p.sommet();
+  Si !p.vide() alors probleme FinSi;
+  Retourner res;
+
+  
